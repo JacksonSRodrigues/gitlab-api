@@ -1,0 +1,53 @@
+{
+    "name": "ts-node-starter",
+    "version": "1.0.0",
+    "description": "A starter project for NodeJS - TypeScript server application",
+    "main": "dist/index.js",
+    "typing": "dist/index.d.ts",
+    "scripts": {
+        "build": "npm run lint && npm run clean && npm run tsc --",
+        "clean": "rimraf dist/",
+        "develop": "npm run build && concurrently -r 'npm run watch' 'npm run start:watch'",
+        "lint": "tslint src/**/*.ts",
+        "prepublish": "npm run build",
+        "rimraf": "node_modules/rimraf/bin.js",
+        "start": "node dist/index.js",
+        "start:watch": "nodemon --watch dist --watch conf dist/index.js",
+        "tdd": "concurrently -r 'npm run watch' 'npm run test:watch'",
+        "test": "istanbul cover ./node_modules/mocha/bin/_mocha -- **/*.spec.js",
+        "test:watch": "nodemon --watch dist --watch test --exec 'npm run test'",
+        "tsc": "node_modules/typescript/bin/tsc",
+        "tslint": "node_modules/tslint/bin/tslint",
+        "watch": "npm run tsc -- -w"
+    },
+    "dependencies": {
+        "es6-promise": "^4.0.5",
+        "mongo-restifier": "^2.0.4"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.48",
+        "chai": "^3.5.0",
+        "concurrently": "^3.1.0",
+        "istanbul": "^0.4.5",
+        "mocha": "^3.2.0",
+        "nodemon": "^1.11.0",
+        "rimraf": "^2.5.4",
+        "tslint": "^3.15.1",
+        "typescript": "2.0.6"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rintoj/ts-node-starter.git"
+    },
+    "author": "Rinto Jose",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rintoj/ts-node-starter/issues"
+    },
+    "homepage": "https://github.com/rintoj/ts-node-starter#readme",
+    "keywords": [
+        "NodeJS",
+        "TypeScript",
+        "Starter"
+    ]
+}
