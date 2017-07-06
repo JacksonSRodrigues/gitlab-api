@@ -29,3 +29,10 @@ export interface TimeStatus {
   spentTimeSting?: string;
   estimatedTimeString?: string;
 }
+
+export interface Note {
+  id?: string;
+  body?: string;
+  createdAt?: Date;
+  system?: boolean;
+}
