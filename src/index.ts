@@ -1,10 +1,13 @@
 import { V3 as api } from './api';
+import { V4 } from './api';
+
 
 export class ReportGenerator {
 
 }
 
 async function result() {
+
     let project = await api.getProject('status-generator-project');
     let milestone = await api.getCurrentMilestone(project.id, new Date());
     console.log(milestone);

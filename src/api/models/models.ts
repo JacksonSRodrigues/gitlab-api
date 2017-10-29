@@ -36,3 +36,10 @@ export interface Note {
   createdAt?: Date;
   system?: boolean;
 }
+
+export interface Label {
+  id: string
+  name: string
+  color?: string
+  description?: string
+}

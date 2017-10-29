@@ -97,4 +97,18 @@ export namespace V4 {
       });
     });
   }
+
+  export function getCommits(projectId: string, fromDate: Date): Promise<any> {
+    return new Promise(async (resolve, reject) => {
+      let downloadCommits = async (projectId: string, fromDate: Date, pageIndex: number, pageCount: number) {
+        api.get(`/projects/${projectId}/repository/commits`).then(result => {
+        resolve(result.body.map(note => {
+          let newNote: Note = Object.assign({}, note);
+          newNote.createdAt = new Date(note.created_at);
+        }));
+      });
+      };
+
+    });
+  }
 }
