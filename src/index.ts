@@ -1,9 +1,27 @@
 import { V3 as api } from './api';
 import { V4 } from './api';
 
+import { Project, Label } from './api';
 
 export class ReportGenerator {
 
+}
+
+async function resultV4() {
+    let neededLabels = [{ name: 'Epic', color: '#FF0000' },
+    { name: 'UserStory', color: '#00FF00' },
+    { name: 'task', color: '#00FF00' }];
+    console.log('v4');
+    const projects: Project[] = await V4.Projects.getAll();
+    const availables: Label[] = await V4.Labels.getAll(projects[0].id);
+    const missingLables = neededLabels.filter(label => availables.find(item => item.name === label.name) === undefined);
+    console.log('Missing Labels', missingLables);
+    console.log('');
+    missingLables.map(async newLabel => {
+        let label = await V4.Labels.create(projects[0].id, newLabel.name, newLabel.color);
+        console.log('Label', label);
+        console.log('');
+    });
 }
 
 async function result() {
@@ -24,4 +42,4 @@ async function result() {
     }
 }
 
-result();
+resultV4();

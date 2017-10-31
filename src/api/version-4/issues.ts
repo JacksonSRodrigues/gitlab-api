@@ -85,9 +85,15 @@ export namespace Issues {
     dueDate?: Date
   ): Promise<Issue> {
     let params = [];
+    params.push(REST.QueryParam.createQuery('title', title));
+    params.push(REST.QueryParam.createQuery('description', description));
+    params.push(REST.QueryParam.createQuery('confidential', confidential.toString()));
+    params.push(REST.QueryParam.createQuery('milestone_id', milestoneId));
+    params.push(REST.QueryParam.createQuery('labels', labels && labels.join(',')));
+    params.push(REST.QueryParam.createQuery('due_date', dueDate.toDateString()));
 
     return new Promise((resolve, reject) => {
-      service.post(`/projects/${projectId}/issues?${params.join('&')}`)
+      service.post(`/projects/${projectId}/issues?${REST.QueryParam.join(params)}`)
         .then((result) => resolve(result.body))
         .catch((error) => reject(error));
     });
