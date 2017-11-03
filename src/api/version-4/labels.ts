@@ -2,6 +2,7 @@ import { service } from './service';
 import { Label } from '../models';
 import { Visibility, SortOrder, Orderby } from '../models';
 import { REST } from '../common';
+const urlencode = require('urlencode');
 
 export namespace Labels {
 
@@ -20,11 +21,11 @@ export namespace Labels {
 
     let params = [];
     params.push(REST.QueryParam.createQuery('name', name));
-    params.push(REST.QueryParam.createQuery('color', color));
+    params.push(REST.QueryParam.createQuery('color', urlencode(color)));
     params.push(REST.QueryParam.createQuery('description', description));
-
+    console.log(`/projects/${projectId}/labels?`, params, REST.QueryParam.join(params));
     return new Promise((resolve, reject) => {
-      service.post(`/projects/${projectId}/labels?${params.join('&')}`)
+      service.post(`/projects/${projectId}/labels?${REST.QueryParam.join(params)}`)
         .then((result) => resolve(result.body))
         .catch((error) => reject(error));
     });
