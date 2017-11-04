@@ -1,7 +1,8 @@
 import { service } from './service';
 import { Issue } from '../models';
-import { Visibility, SortOrder, Orderby, Scope, State } from '../models';
+import { SortOrder, Orderby, Scope, State } from '../models';
 import { REST } from '../common';
+const urlencode = require('urlencode');
 
 export namespace Issues {
 
@@ -86,11 +87,11 @@ export namespace Issues {
   ): Promise<Issue> {
     let params = [];
     params.push(REST.QueryParam.createQuery('title', title));
-    params.push(REST.QueryParam.createQuery('description', description));
+    params.push(REST.QueryParam.createQuery('description', description && urlencode(description)));
     params.push(REST.QueryParam.createQuery('confidential', confidential.toString()));
     params.push(REST.QueryParam.createQuery('milestone_id', milestoneId));
     params.push(REST.QueryParam.createQuery('labels', labels && labels.join(',')));
-    params.push(REST.QueryParam.createQuery('due_date', dueDate.toDateString()));
+    params.push(REST.QueryParam.createQuery('due_date', dueDate && dueDate.toDateString()));
 
     return new Promise((resolve, reject) => {
       service.post(`/projects/${projectId}/issues?${REST.QueryParam.join(params)}`)
@@ -99,4 +100,40 @@ export namespace Issues {
     });
   }
 
+  export function edit(projectId: string,
+    issueId: string,
+    title?: string,
+    description?: string,
+    confidential: boolean = false,
+    assigneeIds?: string[],
+    milestoneId?: string,
+    labels?: string[],
+    dueDate?: Date,
+    event?: 'reopen' | 'close'
+  ): Promise<Issue> {
+    let params = [];
+    params.push(REST.QueryParam.createQuery('title', title));
+    params.push(REST.QueryParam.createQuery('description', description && urlencode(description)));
+    params.push(REST.QueryParam.createQuery('confidential', confidential.toString()));
+    params.push(REST.QueryParam.createQuery('milestone_id', milestoneId));
+    params.push(REST.QueryParam.createQuery('labels', labels && labels.join(',')));
+    params.push(REST.QueryParam.createQuery('due_date', dueDate && dueDate.toDateString()));
+    params.push(REST.QueryParam.createQuery('state_event', event));
+
+
+    return new Promise((resolve, reject) => {
+      service.put(`/projects/${projectId}/issues/${issueId}?${REST.QueryParam.join(params)}`)
+        .then((result) => resolve(result.body))
+        .catch((error) => reject(error));
+    });
+  }
+
+  export function deleteOne(projectId: string,
+    issueId: string): Promise<Issue> {
+    return new Promise((resolve, reject) => {
+      service.put(`/projects/${projectId}/issues/${issueId}`)
+        .then((result) => resolve(result.body))
+        .catch((error) => reject(error));
+    });
+  };
 }

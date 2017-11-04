@@ -38,8 +38,8 @@ export interface Note {
 }
 
 export interface Label {
-  id: string
-  name: string
-  color?: string
-  description?: string
+  id: string;
+  name: string;
+  color?: string;
+  description?: string;
 }

@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 import Frisbee from 'frisbee';
-import { Project, Milestone, Issue, TimeStatus, Note } from './models';
+import { Project, Milestone, Issue, TimeStatus, Note } from '../models';
 
 export namespace V3 {
   'use strict';
@@ -93,7 +93,7 @@ export namespace V3 {
           console.log(individualProgress);
           return accumulate.concat(individualProgress.match(/\d*%/g));
         }, []);
-        console.log(progress);
+      console.log(progress);
       resolve(progress);
     });
   }
