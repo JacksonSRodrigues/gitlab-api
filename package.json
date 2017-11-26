@@ -2,7 +2,7 @@
   "name": "r-gitlab-api",
   "version": "0.0.2",
   "description": "A Typescipt project to which provides services for accessing api",
-  "main": "dist/index.js",
+  "main": "build/main.bundle.js",
   "typing": "dist/index.d.ts",
   "scripts": {
     "build": "npm run lint && npm run clean && tsc",
@@ -18,9 +18,12 @@
     "test:watch": "nodemon --watch dist --watch test --exec 'npm run test'",
     "tsc": "./node_modules/typescript/bin/tsc",
     "tslint": "./node_modules/tslint/bin/tslint",
-    "watch": "npm run tsc -- -w"
+    "watch": "npm run tsc -- -w",
+    "webpack": "./node_modules/webpack/bin",
+    "pack": "webpack"
   },
   "dependencies": {
+    "dts-bundle": "^0.7.3",
     "es6-promise": "^4.0.5",
     "frisbee": "^1.5.0",
     "isomorphic-fetch": "^2.2.1",
@@ -31,12 +34,16 @@
     "@types/node": "^6.0.48",
     "chai": "^3.5.0",
     "concurrently": "^3.1.0",
+    "dts-bundle": "^0.7.3",
+    "dts-webpack-bundler": "^1.0.3",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "rimraf": "^2.5.4",
+    "ts-loader": "^3.1.1",
     "tslint": "^3.15.1",
-    "typescript": "^2.6.1"
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1"
   },
   "repository": {
     "type": "git",
