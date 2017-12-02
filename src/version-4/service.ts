@@ -1,10 +1,18 @@
 import 'isomorphic-fetch';
 import Frisbee from 'frisbee';
-const ACCESS_TOKEN = 'qjP1UJavDqPSkDSBxz6r';
 
-export const service: Frisbee = new Frisbee({
-    baseURI: 'https://gitlab.com/api/v4',
-    headers: {
-        'PRIVATE-TOKEN': ACCESS_TOKEN
-    }
-});
+export let service: Frisbee;
+export function initService(url: string = 'https://gitlab.com/api/v4', token: string = '') {
+    service = new Frisbee({
+        baseURI: url,
+        headers: {
+            'PRIVATE-TOKEN': token
+        }
+    });
+}
+
+export function setAccessToken(token: string) {
+    initService('https://gitlab.com/api/v4', token);
+}
+
+initService();

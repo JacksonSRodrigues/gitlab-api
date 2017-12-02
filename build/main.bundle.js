@@ -2571,20 +2571,24 @@ function objectToString(o) {
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_frisbee__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_frisbee___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_frisbee__);
 
-Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(77);
-var frisbee_1 = __webpack_require__(79);
-var ACCESS_TOKEN = 'qjP1UJavDqPSkDSBxz6r';
-exports.service = new frisbee_1.default({
+
+const ACCESS_TOKEN = 'qjP1UJavDqPSkDSBxz6r';
+const service = new __WEBPACK_IMPORTED_MODULE_1_frisbee___default.a({
     baseURI: 'https://gitlab.com/api/v4',
     headers: {
         'PRIVATE-TOKEN': ACCESS_TOKEN
     }
 });
+/* harmony export (immutable) */ __webpack_exports__["a"] = service;
+
 
 
 /***/ }),
@@ -2905,28 +2909,26 @@ module.exports = function(name){
 
 /***/ }),
 /* 42 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__enums__ = __webpack_require__(143);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__enums__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__enums__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__enums__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__enums__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__enums__["e"]; });
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(143));
 
 
 /***/ }),
 /* 43 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__converter__ = __webpack_require__(144);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__converter__["a"]; });
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(144));
 
 
 /***/ }),
@@ -6495,34 +6497,44 @@ function done(stream, er, data) {
 
 /***/ }),
 /* 75 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__version_4__ = __webpack_require__(76);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "service", function() { return __WEBPACK_IMPORTED_MODULE_0__version_4__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Projects", function() { return __WEBPACK_IMPORTED_MODULE_0__version_4__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Issues", function() { return __WEBPACK_IMPORTED_MODULE_0__version_4__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Labels", function() { return __WEBPACK_IMPORTED_MODULE_0__version_4__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models__ = __webpack_require__(42);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Visibility", function() { return __WEBPACK_IMPORTED_MODULE_1__models__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Orderby", function() { return __WEBPACK_IMPORTED_MODULE_1__models__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "SortOrder", function() { return __WEBPACK_IMPORTED_MODULE_1__models__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "State", function() { return __WEBPACK_IMPORTED_MODULE_1__models__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Scope", function() { return __WEBPACK_IMPORTED_MODULE_1__models__["b"]; });
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(76));
-__export(__webpack_require__(42));
+
 // export { V4 }
 // import './test'; 
 
 
 /***/ }),
 /* 76 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__service__ = __webpack_require__(21);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__service__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__projects__ = __webpack_require__(142);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__projects__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__issues__ = __webpack_require__(145);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__issues__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__labels__ = __webpack_require__(175);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__labels__["a"]; });
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(21));
-__export(__webpack_require__(142));
-__export(__webpack_require__(145));
-__export(__webpack_require__(175));
+
+
+
 
 
 /***/ }),
@@ -10360,60 +10372,60 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 /* 142 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Projects; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__service__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(43);
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var service_1 = __webpack_require__(21);
-var models_1 = __webpack_require__(42);
-var common_1 = __webpack_require__(43);
+
+
 var Projects;
 (function (Projects) {
-    function getAll(visibity, owned, membership, sort, orderby, search) {
-        if (visibity === void 0) { visibity = models_1.Visibility.PRIVATE; }
-        if (owned === void 0) { owned = true; }
-        if (membership === void 0) { membership = true; }
-        if (sort === void 0) { sort = models_1.SortOrder.ASCENDING; }
-        if (orderby === void 0) { orderby = models_1.Orderby.CREATED_AT; }
-        var params = [];
-        params.push(common_1.REST.QueryParam.createQuery('visibility', visibity));
-        params.push(common_1.REST.QueryParam.createQuery('owned', owned.toString()));
-        params.push(common_1.REST.QueryParam.createQuery('membership', membership.toString()));
-        params.push(common_1.REST.QueryParam.createQuery('sort', sort));
-        params.push(common_1.REST.QueryParam.createQuery('order_by', orderby));
-        params.push(common_1.REST.QueryParam.createQuery('search', search));
-        return new Promise(function (resolve, reject) {
-            service_1.service.get("/projects?" + common_1.REST.QueryParam.join(params))
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+    function getAll(visibity = __WEBPACK_IMPORTED_MODULE_1__models__["e" /* Visibility */].PRIVATE, owned = true, membership = true, sort = __WEBPACK_IMPORTED_MODULE_1__models__["c" /* SortOrder */].ASCENDING, orderby = __WEBPACK_IMPORTED_MODULE_1__models__["a" /* Orderby */].CREATED_AT, search) {
+        let params = [];
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('visibility', visibity));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('owned', owned.toString()));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('membership', membership.toString()));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('sort', sort));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('order_by', orderby));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('search', search));
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].get(`/projects?${__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.join(params)}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Projects.getAll = getAll;
     function getOne(id) {
-        return new Promise(function (resolve, reject) {
-            service_1.service.get("/projects/" + id)
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].get(`/projects/${id}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Projects.getOne = getOne;
-})(Projects = exports.Projects || (exports.Projects = {}));
+})(Projects || (Projects = {}));
 
 
 /***/ }),
 /* 143 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Visibility; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Orderby; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return SortOrder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return State; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Scope; });
 var Visibility;
 (function (Visibility) {
     Visibility["PUBLIC"] = "public";
     Visibility["INTERNAL"] = "internal";
     Visibility["PRIVATE"] = "private";
-})(Visibility = exports.Visibility || (exports.Visibility = {}));
+})(Visibility || (Visibility = {}));
 var Orderby;
 (function (Orderby) {
     Orderby["ID"] = "id";
@@ -10422,168 +10434,148 @@ var Orderby;
     Orderby["CREATED_AT"] = "created_at";
     Orderby["UPDATED_AT"] = "updated_at";
     Orderby["LAST_ACTIVITY_AT"] = "last_activity_at";
-})(Orderby = exports.Orderby || (exports.Orderby = {}));
+})(Orderby || (Orderby = {}));
 var SortOrder;
 (function (SortOrder) {
     SortOrder["ASCENDING"] = "asc";
     SortOrder["DESCENDING"] = "desc";
-})(SortOrder = exports.SortOrder || (exports.SortOrder = {}));
+})(SortOrder || (SortOrder = {}));
 var State;
 (function (State) {
     State["OPENED"] = "opened";
     State["CLOSED"] = "closed";
-})(State = exports.State || (exports.State = {}));
+})(State || (State = {}));
 var Scope;
 (function (Scope) {
     Scope["ALL"] = "all";
     Scope["ASSIGNED_TO_ME"] = "assigned_to_me";
     Scope["CREATED_BY_ME"] = "created_by_me";
-})(Scope = exports.Scope || (exports.Scope = {}));
+})(Scope || (Scope = {}));
 
 
 /***/ }),
 /* 144 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return REST; });
 var REST;
 (function (REST) {
-    var QueryParam;
+    let QueryParam;
     (function (QueryParam) {
         function join(params) {
-            return params.filter(function (value) { return value != undefined; }).join('&');
+            return params.filter(value => value != undefined).join('&');
         }
         QueryParam.join = join;
         function createQuery(key, value) {
-            return (value) ? key + "=" + value : undefined;
+            return (value) ? `${key}=${value}` : undefined;
         }
         QueryParam.createQuery = createQuery;
     })(QueryParam = REST.QueryParam || (REST.QueryParam = {}));
-})(REST = exports.REST || (exports.REST = {}));
+})(REST || (REST = {}));
 
 
 /***/ }),
 /* 145 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Issues; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__service__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(43);
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var service_1 = __webpack_require__(21);
-var models_1 = __webpack_require__(42);
-var common_1 = __webpack_require__(43);
-var urlencode = __webpack_require__(68);
+
+
+const urlencode = __webpack_require__(68);
 var Issues;
 (function (Issues) {
-    function getAll(state, scope, labels, milestoneTitle, orderBy, sort, search, milestoneIds, authoredBy, assignedTo) {
-        if (state === void 0) { state = undefined; }
-        if (scope === void 0) { scope = models_1.Scope.ALL; }
-        if (labels === void 0) { labels = undefined; }
-        if (milestoneTitle === void 0) { milestoneTitle = undefined; }
-        if (orderBy === void 0) { orderBy = models_1.Orderby.CREATED_AT; }
-        if (sort === void 0) { sort = models_1.SortOrder.DESCENDING; }
-        if (search === void 0) { search = undefined; }
-        if (milestoneIds === void 0) { milestoneIds = undefined; }
-        if (authoredBy === void 0) { authoredBy = undefined; }
-        if (assignedTo === void 0) { assignedTo = undefined; }
-        var params = [];
-        params.push(common_1.REST.QueryParam.createQuery('state', state));
-        params.push(common_1.REST.QueryParam.createQuery('scope', scope));
-        params.push(common_1.REST.QueryParam.createQuery('labels', labels ? labels.join(',') : undefined));
-        params.push(common_1.REST.QueryParam.createQuery('milestone', milestoneTitle));
-        params.push(common_1.REST.QueryParam.createQuery('order_by', orderBy));
-        params.push(common_1.REST.QueryParam.createQuery('sort', sort));
-        params.push(common_1.REST.QueryParam.createQuery('search', search));
-        params.push.apply(params, (milestoneIds || []).map(function (iid) { return common_1.REST.QueryParam.createQuery('iids[]', iid); }));
-        params.push(common_1.REST.QueryParam.createQuery('author_id', authoredBy));
-        params.push(common_1.REST.QueryParam.createQuery('assignee_id', assignedTo));
-        return new Promise(function (resolve, reject) {
-            service_1.service.get("/issues?" + common_1.REST.QueryParam.join(params))
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+    function getAll(state = undefined, scope = __WEBPACK_IMPORTED_MODULE_1__models__["b" /* Scope */].ALL, labels = undefined, milestoneTitle = undefined, orderBy = __WEBPACK_IMPORTED_MODULE_1__models__["a" /* Orderby */].CREATED_AT, sort = __WEBPACK_IMPORTED_MODULE_1__models__["c" /* SortOrder */].DESCENDING, search = undefined, milestoneIds = undefined, authoredBy = undefined, assignedTo = undefined) {
+        let params = [];
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('state', state));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('scope', scope));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('labels', labels ? labels.join(',') : undefined));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('milestone', milestoneTitle));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('order_by', orderBy));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('sort', sort));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('search', search));
+        params.push(...(milestoneIds || []).map(iid => __WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('iids[]', iid)));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('author_id', authoredBy));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('assignee_id', assignedTo));
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].get(`/issues?${__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.join(params)}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Issues.getAll = getAll;
-    function getAllOfProject(projectId, state, scope, labels, milestoneTitle, sort, search, milestoneIds, authoredBy, assignedTo) {
-        if (state === void 0) { state = undefined; }
-        if (scope === void 0) { scope = models_1.Scope.ALL; }
-        if (labels === void 0) { labels = undefined; }
-        if (milestoneTitle === void 0) { milestoneTitle = undefined; }
-        if (sort === void 0) { sort = models_1.SortOrder.DESCENDING; }
-        if (search === void 0) { search = undefined; }
-        if (milestoneIds === void 0) { milestoneIds = undefined; }
-        if (authoredBy === void 0) { authoredBy = undefined; }
-        if (assignedTo === void 0) { assignedTo = undefined; }
-        var params = [];
-        params.push(common_1.REST.QueryParam.createQuery('state', state));
-        params.push(common_1.REST.QueryParam.createQuery('scope', scope));
-        params.push(common_1.REST.QueryParam.createQuery('labels', labels ? labels.join(',') : undefined));
-        params.push(common_1.REST.QueryParam.createQuery('milestone', milestoneTitle));
-        params.push(common_1.REST.QueryParam.createQuery('sort', sort));
-        params.push(common_1.REST.QueryParam.createQuery('search', search));
-        params.push.apply(params, (milestoneIds || []).map(function (iid) { return common_1.REST.QueryParam.createQuery('iids[]', iid); }));
-        params.push(common_1.REST.QueryParam.createQuery('author_id', authoredBy));
-        params.push(common_1.REST.QueryParam.createQuery('assignee_id', assignedTo));
-        return new Promise(function (resolve, reject) {
-            service_1.service.get("/projects/" + projectId + "/issues?" + common_1.REST.QueryParam.join(params))
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+    function getAllOfProject(projectId, state = undefined, scope = __WEBPACK_IMPORTED_MODULE_1__models__["b" /* Scope */].ALL, labels = undefined, milestoneTitle = undefined, sort = __WEBPACK_IMPORTED_MODULE_1__models__["c" /* SortOrder */].DESCENDING, search = undefined, milestoneIds = undefined, authoredBy = undefined, assignedTo = undefined) {
+        let params = [];
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('state', state));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('scope', scope));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('labels', labels ? labels.join(',') : undefined));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('milestone', milestoneTitle));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('sort', sort));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('search', search));
+        params.push(...(milestoneIds || []).map(iid => __WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('iids[]', iid)));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('author_id', authoredBy));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('assignee_id', assignedTo));
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].get(`/projects/${projectId}/issues?${__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.join(params)}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Issues.getAllOfProject = getAllOfProject;
     function getOneOfProject(projectId, issueId) {
-        return new Promise(function (resolve, reject) {
-            service_1.service.get("/projects/" + projectId + "/issues/" + issueId)
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].get(`/projects/${projectId}/issues/${issueId}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Issues.getOneOfProject = getOneOfProject;
-    function create(projectId, title, description, confidential, assigneeIds, milestoneId, labels, dueDate) {
-        if (confidential === void 0) { confidential = false; }
-        var params = [];
-        params.push(common_1.REST.QueryParam.createQuery('title', title));
-        params.push(common_1.REST.QueryParam.createQuery('description', description && urlencode(description)));
-        params.push(common_1.REST.QueryParam.createQuery('confidential', confidential.toString()));
-        params.push(common_1.REST.QueryParam.createQuery('milestone_id', milestoneId));
-        params.push(common_1.REST.QueryParam.createQuery('labels', labels && labels.join(',')));
-        params.push(common_1.REST.QueryParam.createQuery('due_date', dueDate && dueDate.toDateString()));
-        return new Promise(function (resolve, reject) {
-            service_1.service.post("/projects/" + projectId + "/issues?" + common_1.REST.QueryParam.join(params))
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+    function create(projectId, title, description, confidential = false, assigneeIds, milestoneId, labels, dueDate) {
+        let params = [];
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('title', title));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('description', description && urlencode(description)));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('confidential', confidential.toString()));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('milestone_id', milestoneId));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('labels', labels && labels.join(',')));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('due_date', dueDate && dueDate.toDateString()));
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].post(`/projects/${projectId}/issues?${__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.join(params)}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Issues.create = create;
-    function edit(projectId, issueId, title, description, confidential, assigneeIds, milestoneId, labels, dueDate, event) {
-        if (confidential === void 0) { confidential = false; }
-        var params = [];
-        params.push(common_1.REST.QueryParam.createQuery('title', title));
-        params.push(common_1.REST.QueryParam.createQuery('description', description && urlencode(description)));
-        params.push(common_1.REST.QueryParam.createQuery('confidential', confidential.toString()));
-        params.push(common_1.REST.QueryParam.createQuery('milestone_id', milestoneId));
-        params.push(common_1.REST.QueryParam.createQuery('labels', labels && labels.join(',')));
-        params.push(common_1.REST.QueryParam.createQuery('due_date', dueDate && dueDate.toDateString()));
-        params.push(common_1.REST.QueryParam.createQuery('state_event', event));
-        return new Promise(function (resolve, reject) {
-            service_1.service.put("/projects/" + projectId + "/issues/" + issueId + "?" + common_1.REST.QueryParam.join(params))
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+    function edit(projectId, issueId, title, description, confidential = false, assigneeIds, milestoneId, labels, dueDate, event) {
+        let params = [];
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('title', title));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('description', description && urlencode(description)));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('confidential', confidential.toString()));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('milestone_id', milestoneId));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('labels', labels && labels.join(',')));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('due_date', dueDate && dueDate.toDateString()));
+        params.push(__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.createQuery('state_event', event));
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].put(`/projects/${projectId}/issues/${issueId}?${__WEBPACK_IMPORTED_MODULE_2__common__["a" /* REST */].QueryParam.join(params)}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Issues.edit = edit;
     function deleteOne(projectId, issueId) {
-        return new Promise(function (resolve, reject) {
-            service_1.service.put("/projects/" + projectId + "/issues/" + issueId)
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].put(`/projects/${projectId}/issues/${issueId}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Issues.deleteOne = deleteOne;
     ;
-})(Issues = exports.Issues || (exports.Issues = {}));
+})(Issues || (Issues = {}));
 
 
 /***/ }),
@@ -13850,37 +13842,38 @@ module.exports = function (iconv) {
 
 /***/ }),
 /* 175 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Labels; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__service__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common__ = __webpack_require__(43);
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var service_1 = __webpack_require__(21);
-var common_1 = __webpack_require__(43);
-var urlencode = __webpack_require__(68);
+
+const urlencode = __webpack_require__(68);
 var Labels;
 (function (Labels) {
     function getAll(projectId) {
-        return new Promise(function (resolve, reject) {
-            service_1.service.get("/projects/" + projectId + "/labels")
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].get(`/projects/${projectId}/labels`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Labels.getAll = getAll;
     function create(projectId, name, color, description) {
-        var params = [];
-        params.push(common_1.REST.QueryParam.createQuery('name', name));
-        params.push(common_1.REST.QueryParam.createQuery('color', urlencode(color)));
-        params.push(common_1.REST.QueryParam.createQuery('description', description));
-        return new Promise(function (resolve, reject) {
-            service_1.service.post("/projects/" + projectId + "/labels?" + common_1.REST.QueryParam.join(params))
-                .then(function (result) { return resolve(result.body); })
-                .catch(function (error) { return reject(error); });
+        let params = [];
+        params.push(__WEBPACK_IMPORTED_MODULE_1__common__["a" /* REST */].QueryParam.createQuery('name', name));
+        params.push(__WEBPACK_IMPORTED_MODULE_1__common__["a" /* REST */].QueryParam.createQuery('color', urlencode(color)));
+        params.push(__WEBPACK_IMPORTED_MODULE_1__common__["a" /* REST */].QueryParam.createQuery('description', description));
+        return new Promise((resolve, reject) => {
+            __WEBPACK_IMPORTED_MODULE_0__service__["a" /* service */].post(`/projects/${projectId}/labels?${__WEBPACK_IMPORTED_MODULE_1__common__["a" /* REST */].QueryParam.join(params)}`)
+                .then((result) => resolve(result.body))
+                .catch((error) => reject(error));
         });
     }
     Labels.create = create;
-})(Labels = exports.Labels || (exports.Labels = {}));
+})(Labels || (Labels = {}));
 
 
 /***/ })
